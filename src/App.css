@@ -1,0 +1,10 @@
+.App {
+  background-color: #222;
+  height: 100%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
