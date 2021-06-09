@@ -1,12 +1,12 @@
 import './App.css';
-import { TechGrid } from './components/TechGrid/TechGrid';
+import { HandCards } from './components/TechGrid/HandCards';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       </header>
-      <TechGrid />
+      <HandCards />
     </div>
   );
 }

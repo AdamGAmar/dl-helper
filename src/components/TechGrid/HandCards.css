@@ -1,0 +1,74 @@
+.Hand-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.Hand-buttonZone {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    width: 240px;
+    justify-content: center;
+}
+
+.Hand-actionLink {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.Hand-Row {
+    align-items: center;
+    border: 1px solid #ccc;
+    color: #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    min-width: 250px;
+    padding-bottom: 290px;
+}
+
+.Hand-Row-dropCol {
+    flex: 0 0 40%;
+}
+
+.Hand-Row-label {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex: 0 0 20%;
+    justify-content: center;
+}
+
+.Hand-card {
+    position: relative;
+    max-width: 19vw;
+    width: 240px;
+    height: 50px;
+    overflow-y: visible;
+}
+
+.Hand-card-image {
+    max-width: 19vw;
+    width: 240px;
+}
+
+.Hand-card-tooltip {
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 0;
+    display: none;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 0 40px white;
+    border: 5px solid #ccc;
+}
+
+.Hand-card:hover .Hand-card-tooltip {
+    display: block;
+}
+
+.Hand-card:hover .Hand-card-tooltip:hover {
+    display: none;
+}
