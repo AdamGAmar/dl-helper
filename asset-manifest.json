@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/dl-helper/static/css/main.32846578.css",
+    "main.js": "/dl-helper/static/js/main.0bba552f.js",
+    "static/js/453.be146289.chunk.js": "/dl-helper/static/js/453.be146289.chunk.js",
+    "static/media/fh-venomous-barbs.png": "/dl-helper/static/media/fh-venomous-barbs.0e8f228e951a6197918b.png",
+    "static/media/fh-hornbeetle-carapace.png": "/dl-helper/static/media/fh-hornbeetle-carapace.6a7df852d6afbcbaacd6.png",
+    "static/media/fh-feeding-frenzy.png": "/dl-helper/static/media/fh-feeding-frenzy.7ec30f656b9e13fd29b0.png",
+    "static/media/fh-drag-down.png": "/dl-helper/static/media/fh-drag-down.12456c75e6254948db9f.png",
+    "static/media/fh-icebound-quills.png": "/dl-helper/static/media/fh-icebound-quills.0bc8ee5a0791dad22ee5.png",
+    "static/media/fh-draining-pincers.png": "/dl-helper/static/media/fh-draining-pincers.c729f007cc0d4c4225a0.png",
+    "static/media/fh-hornet-stingers.png": "/dl-helper/static/media/fh-hornet-stingers.0271897e6e8c4771bed7.png",
+    "static/media/fh-changelings-boon.png": "/dl-helper/static/media/fh-changelings-boon.36237cc7c01508bd60f8.png",
+    "static/media/fh-reckless-jab.png": "/dl-helper/static/media/fh-reckless-jab.2b38a270edbea5dada4b.png",
+    "static/media/fh-scarab-flight.png": "/dl-helper/static/media/fh-scarab-flight.edadfba173aa4709e130.png",
+    "static/media/fh-reshape-the-guise.png": "/dl-helper/static/media/fh-reshape-the-guise.f39dfd010387799c7877.png",
+    "static/media/fh-selfless-offering.png": "/dl-helper/static/media/fh-selfless-offering.e1e566dbfea5956b507e.png",
+    "static/media/fh-smoldering-hatred.png": "/dl-helper/static/media/fh-smoldering-hatred.f62bec5256b4c7345842.png",
+    "static/media/fh-mind-spike.png": "/dl-helper/static/media/fh-mind-spike.7b3c1ce7bc5a75568407.png",
+    "static/media/fh-harvest-the-essence.png": "/dl-helper/static/media/fh-harvest-the-essence.2482f3f7a1a2c012c6d5.png",
+    "static/media/fh-firefly-swarm.png": "/dl-helper/static/media/fh-firefly-swarm.e736a19dff0827083095.png",
+    "static/media/fh-into-my-embrace.png": "/dl-helper/static/media/fh-into-my-embrace.ef96d0d61e13996c3918.png",
+    "static/media/fh-flailing-tendrils.png": "/dl-helper/static/media/fh-flailing-tendrils.98d99540ecf4cfeb4940.png",
+    "static/media/fh-hail-of-thorns.png": "/dl-helper/static/media/fh-hail-of-thorns.cc5c6308d30495134e98.png",
+    "index.html": "/dl-helper/index.html",
+    "main.32846578.css.map": "/dl-helper/static/css/main.32846578.css.map",
+    "main.0bba552f.js.map": "/dl-helper/static/js/main.0bba552f.js.map",
+    "453.be146289.chunk.js.map": "/dl-helper/static/js/453.be146289.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32846578.css",
+    "static/js/main.0bba552f.js"
+  ]
+}
