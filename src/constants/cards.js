@@ -17,6 +17,7 @@ import hail_of_thorns from '../assets/fh-hail-of-thorns.png';
 import smoldering_hatred from '../assets/fh-smoldering-hatred.png';
 import reshape_the_guise from '../assets/fh-reshape-the-guise.png';
 import venomous_barbs from '../assets/fh-venomous-barbs.png';
+import dragonfly_surge from '../assets/fh-dragonfly-surge.png';
 
 export const CARDS = {
     melee: [
@@ -41,5 +42,6 @@ export const CARDS = {
         hail_of_thorns,
         smoldering_hatred,
         reshape_the_guise,
+        dragonfly_surge,
     ],
 };
