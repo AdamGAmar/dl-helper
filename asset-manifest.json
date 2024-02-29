@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dl-helper/static/css/main.32846578.css",
-    "main.js": "/dl-helper/static/js/main.c8357f44.js",
+    "main.js": "/dl-helper/static/js/main.c10bbecb.js",
     "static/js/453.be146289.chunk.js": "/dl-helper/static/js/453.be146289.chunk.js",
     "static/media/fh-venomous-barbs.png": "/dl-helper/static/media/fh-venomous-barbs.0e8f228e951a6197918b.png",
     "static/media/fh-hornbeetle-carapace.png": "/dl-helper/static/media/fh-hornbeetle-carapace.6a7df852d6afbcbaacd6.png",
@@ -25,11 +25,11 @@
     "static/media/fh-dragonfly-surge.png": "/dl-helper/static/media/fh-dragonfly-surge.7b428c442a51633eed8e.png",
     "index.html": "/dl-helper/index.html",
     "main.32846578.css.map": "/dl-helper/static/css/main.32846578.css.map",
-    "main.c8357f44.js.map": "/dl-helper/static/js/main.c8357f44.js.map",
+    "main.c10bbecb.js.map": "/dl-helper/static/js/main.c10bbecb.js.map",
     "453.be146289.chunk.js.map": "/dl-helper/static/js/453.be146289.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32846578.css",
-    "static/js/main.c8357f44.js"
+    "static/js/main.c10bbecb.js"
   ]
 }
