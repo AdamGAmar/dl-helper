@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dl-helper/static/css/main.32846578.css",
-    "main.js": "/dl-helper/static/js/main.0bba552f.js",
+    "main.js": "/dl-helper/static/js/main.c8357f44.js",
     "static/js/453.be146289.chunk.js": "/dl-helper/static/js/453.be146289.chunk.js",
     "static/media/fh-venomous-barbs.png": "/dl-helper/static/media/fh-venomous-barbs.0e8f228e951a6197918b.png",
     "static/media/fh-hornbeetle-carapace.png": "/dl-helper/static/media/fh-hornbeetle-carapace.6a7df852d6afbcbaacd6.png",
@@ -22,13 +22,14 @@
     "static/media/fh-into-my-embrace.png": "/dl-helper/static/media/fh-into-my-embrace.ef96d0d61e13996c3918.png",
     "static/media/fh-flailing-tendrils.png": "/dl-helper/static/media/fh-flailing-tendrils.98d99540ecf4cfeb4940.png",
     "static/media/fh-hail-of-thorns.png": "/dl-helper/static/media/fh-hail-of-thorns.cc5c6308d30495134e98.png",
+    "static/media/fh-dragonfly-surge.png": "/dl-helper/static/media/fh-dragonfly-surge.7b428c442a51633eed8e.png",
     "index.html": "/dl-helper/index.html",
     "main.32846578.css.map": "/dl-helper/static/css/main.32846578.css.map",
-    "main.0bba552f.js.map": "/dl-helper/static/js/main.0bba552f.js.map",
+    "main.c8357f44.js.map": "/dl-helper/static/js/main.c8357f44.js.map",
     "453.be146289.chunk.js.map": "/dl-helper/static/js/453.be146289.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.32846578.css",
-    "static/js/main.0bba552f.js"
+    "static/js/main.c8357f44.js"
   ]
 }
