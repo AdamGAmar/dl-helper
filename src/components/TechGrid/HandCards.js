@@ -30,9 +30,23 @@ function getRandomInt(max) {
   }
 
 export const HandCards = (props) => {
-    const existingSetup = window.localStorage.getItem("setup");
+    let existingSetup = window.localStorage.getItem("setup");
+    if (existingSetup) {
+        existingSetup = JSON.parse(existingSetup);
 
-    const [cardZones, setCardZones] = useState(existingSetup ? JSON.parse(existingSetup) : defaultSetup);
+        const notInPlay = [...defaultSetup.melee, ...defaultSetup.ranged].filter((item) => (
+            !existingSetup.ranged.includes(item) && !existingSetup.melee.includes(item)
+        ));
+
+        existingSetup = {
+            ...existingSetup,
+            notInPlay,
+            inPlayOne: [],
+            inPlayTwo: []
+        }
+    }
+
+    const [cardZones, setCardZones] = useState(existingSetup || defaultSetup);
     const [gameState, setGameState] = useState(SETUP);
     const [redrawn, setRedrawn] = useState(false);
 

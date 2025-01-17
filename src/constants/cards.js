@@ -18,6 +18,7 @@ import smoldering_hatred from '../assets/fh-smoldering-hatred.png';
 import reshape_the_guise from '../assets/fh-reshape-the-guise.png';
 import venomous_barbs from '../assets/fh-venomous-barbs.png';
 import dragonfly_surge from '../assets/fh-dragonfly-surge.png';
+import thresh_and_flail from '../assets/fh-thresh-and-flail.png';
 
 export const CARDS = {
     melee: [
@@ -31,6 +32,7 @@ export const CARDS = {
         flailing_tendrils,
         feeding_frenzy,
         venomous_barbs,
+        thresh_and_flail,
     ],
     ranged: [
         selfless_offering,
