@@ -14,35 +14,44 @@ let dragItem;
 let dragSource;
 
 const defaultSetup = {
-    melee: CARDS.melee.map(card => card),
-    ranged: CARDS.ranged.map(card => card),
-    // hand: [...CARDS.melee.map(card => card), ...CARDS.ranged.map(card => card)],
+    hand: [],
     inPlayOne: [],
     inPlayTwo: [],
     discard: [],
     burned: [],
-    notInPlay: [],
+    notInPlay: [...CARDS],
     toBeBurned: [],
 }
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+}
+
+const TimeCounters = () => {
+    const [timeCounters, setTimeCounters] = useState(2);
+    return <div style={{fontSize: "1.5em", color: "white"}}>
+        <div>Time Counters</div>
+        <button style={{fontSize: "1.5em", width: "2em"}} onClick={() => setTimeCounters(timeCounters - 1)}>-</button>
+        <b style={{margin: "1em"}}>{timeCounters}</b>
+        <button style={{fontSize: "1.5em", width: "2em"}} onClick={() => setTimeCounters(timeCounters + 1)}>+</button>
+    </div>
+}
 
 export const HandCards = (props) => {
     let existingSetup = window.localStorage.getItem("setup");
     if (existingSetup) {
         existingSetup = JSON.parse(existingSetup);
 
-        const notInPlay = [...defaultSetup.melee, ...defaultSetup.ranged].filter((item) => (
-            !existingSetup.ranged.includes(item) && !existingSetup.melee.includes(item)
+        const notInPlay = [...defaultSetup.notInPlay].filter((item) => (
+            !existingSetup.hand?.includes(item)
         ));
 
         existingSetup = {
-            ...existingSetup,
+            ...defaultSetup,
+            hand: existingSetup.hand || defaultSetup.hand,
             notInPlay,
             inPlayOne: [],
-            inPlayTwo: []
+            inPlayTwo: [],
         }
     }
 
@@ -83,7 +92,7 @@ export const HandCards = (props) => {
     }
 
     const confirmSetup = () => {
-        window.localStorage.setItem("setup", JSON.stringify(cardZones));
+        window.localStorage.setItem("setup", JSON.stringify({ hand: cardZones.hand }));
         setGameState(SELECTING);
     }
 
@@ -118,13 +127,11 @@ export const HandCards = (props) => {
         setGameState(SELECTING);
         setRedrawn(false);
 
-        const ranged = cardZones.discard.filter(i => CARDS.ranged.includes(i));
-        const melee = cardZones.discard.filter(i => CARDS.melee.includes(i));
+        const newHand = cardZones.discard.filter(i => CARDS.ranged.includes(i));
 
         setCardZones({
             ...cardZones,
-            melee: [...cardZones.melee, ...melee],
-            ranged: [...cardZones.ranged, ...ranged],
+            hand: [...cardZones.hand, ...newHand],
             burned: [...cardZones.burned, ...cardZones.toBeBurned],
             discard: [],
             toBeBurned: [],
@@ -134,19 +141,19 @@ export const HandCards = (props) => {
     return (
         <div>
             <div className="Hand-wrapper">
-                <Row zone='inPlayOne' isDragTarget />
-                <Row zone='inPlayTwo' isDragTarget />
+                { gameState !== SETUP && <Row zone='inPlayOne' isDragTarget /> }
+                { gameState !== SETUP && <Row zone='inPlayTwo' isDragTarget /> }
                 <div className="Hand-buttonZone">
-                    { gameState === SETUP && <button className="Hand-actionLink" disabled={!(cardZones.melee.length === 7 && cardZones.ranged.length === 7)} onClick={() => confirmSetup()}>Confirm Setup</button> }
+                    { gameState === SETUP && <button className="Hand-actionLink" disabled={cardZones.hand.length !== 10} onClick={() => confirmSetup()}>Confirm Setup</button> }
                     { gameState === SELECTING && <button className="Hand-actionLink" disabled={!cardZones.discard.length} onClick={() => shortRest()}>Short Rest</button> }
                     { gameState === SELECTING && <button className="Hand-actionLink" disabled={!cardZones.discard.length} onClick={() => longRest()}>Long Rest</button> }
                     { (gameState === SHORT_RESTING || gameState === LONG_RESTING) && <button className="Hand-actionLink" disabled={!cardZones.toBeBurned.length} onClick={() => finishRest()}>Confirm Rest</button> }
                     { (gameState === SHORT_RESTING) && <button className="Hand-actionLink" disabled={redrawn} onClick={() => redraw()}>Redraw</button> }
+                    { gameState !== SETUP && <TimeCounters />}
                 </div>
             </div>
             <div className="Hand-wrapper">
-                <Row zone='melee' isDragTarget showTooltip />
-                <Row zone='ranged' isDragTarget showTooltip />
+                <Row zone='hand' isDragTarget showTooltip />
                 { gameState === SETUP && <Row zone='notInPlay' isDragTarget showTooltip /> }
                 { gameState !== SETUP && <Row zone='discard' isDragTarget showTooltip /> }
                 { gameState === SELECTING && <Row zone='burned' isDragTarget showTooltip /> }
